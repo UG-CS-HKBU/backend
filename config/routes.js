@@ -37,6 +37,8 @@ module.exports.routes = {
 
   'GET /course/json': 'CourseController.json',
 
+  'GET /course/read/:id': 'CourseController.read',
+
   'POST /student/create': 'StudentController.create',
 
   'GET /student/json': 'StudentController.json',

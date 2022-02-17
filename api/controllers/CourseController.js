@@ -18,6 +18,11 @@ module.exports = {
         return res.json(everycourses);
     },
 
+    read: async function (req, res) {
+        var course = await Course.findOne(req.params.id);
+        return res.json(course);
+    },
+
     populate: async function (req, res) {
 
         var course = await Course.findOne(req.params.id).populate("student");
